@@ -1,0 +1,24 @@
+{
+  "originHash" : "7dc9afb92bafcffa1a7132787e31e75a610acda9a80fc5d115bad8baa226bb9c",
+  "pins" : [
+    {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire.git",
+      "state" : {
+        "revision" : "f455c2975872ccd2d9c81594c658af65716e9b9a",
+        "version" : "5.9.1"
+      }
+    },
+    {
+      "identity" : "interactivemap",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/GrandSir/InteractiveMap",
+      "state" : {
+        "branch" : "main",
+        "revision" : "4fc6f5f736c9cbf2352938a6b27712937a5d6465"
+      }
+    }
+  ],
+  "version" : 3
+}
