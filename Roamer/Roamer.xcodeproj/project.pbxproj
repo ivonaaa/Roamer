@@ -44,7 +44,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		48C272782BECB92900FEF91B /* ApiCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCall.swift; sourceTree = "<group>"; };
 		48C2727B2BECBA6C00FEF91B /* world-low.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "world-low.svg"; path = "../../../../Downloads/world-low.svg"; sourceTree = "<group>"; };
 		48C272C42BEF46E500FEF91B /* TravelMapAndDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelMapAndDiaryView.swift; sourceTree = "<group>"; };
 		48CF618A2BEA99B100691E2A /* Roamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roamer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,7 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				48CF61A22BEA9B5500691E2A /* CountryRepository.swift */,
-				48C272782BECB92900FEF91B /* ApiCall.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";

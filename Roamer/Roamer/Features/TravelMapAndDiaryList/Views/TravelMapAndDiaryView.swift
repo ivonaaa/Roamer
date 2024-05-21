@@ -12,7 +12,7 @@ struct TravelMapAndDiaryView: View {
     @ObservedObject var viewModel = ViewModel()
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 InteractiveMap(svgName: "world-low") { pathData in
                     InteractiveShape(pathData)

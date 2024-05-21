@@ -7,39 +7,32 @@
 
 import Foundation
 import Alamofire
-import Combine
 
+@MainActor
 class ViewModel: ObservableObject {
     @Published var countries: [Country] = []
     @Published var myCountries: [String] = []
-    private var cancellables = Set<AnyCancellable>()
     private let countryRepository = CountryRepository()
 
     init() {
-        setupDataSubscription()
+        Task {
+            await setupDataSubscription()
+        }
     }
 
-    func setupDataSubscription() {
-        countryRepository.fetchCountries()
-            .map { responses in
-                responses.map { country in
-                    Country(
-                        officialName: country.name.official,
-                        countryCode: country.altSpellings.first ?? "",
-                        flag: country.flags.png
-                    )
-                }
+    func setupDataSubscription() async {
+        do {
+            let responses = try await countryRepository.fetchCountries()
+            self.countries = responses.map { country in
+                Country(
+                    officialName: country.name.official,
+                    countryCode: country.altSpellings.first ?? "",
+                    flag: country.flags.png
+                )
             }
-            .subscribe(on: DispatchQueue.global())
-            .receive(on: DispatchQueue.main)
-            .sink { completion in
-                if case let .failure(error) = completion {
-                    print("Error fetching countries: \(error)")
-                }
-            } receiveValue: { [weak self] countries in
-                self?.countries = countries
-            }
-            .store(in: &cancellables)
+        } catch {
+            print("Error fetching countries: \(error)")
+        }
     }
     
     func addCountryToMyCountries(country: String) {

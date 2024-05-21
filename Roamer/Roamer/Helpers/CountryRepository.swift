@@ -6,16 +6,19 @@
 //
 
 import Alamofire
-import Combine
 
 class CountryRepository {
-    func fetchCountries() -> AnyPublisher<[CountryResponse], AFError> {
+    func fetchCountries() async throws -> [CountryResponse] {
         let url = "https://restcountries.com/v3.1/all?fields=name,flags,altSpellings"
-        return AF.request(url)
-            .validate()
-            .publishDecodable(type: [CountryResponse].self)
-            .value()
-            .eraseToAnyPublisher()
+        let dataRequest = AF.request(url).validate().serializingDecodable([CountryResponse].self)
+        let result = await dataRequest.result
+        
+        switch result {
+        case .success(let countries):
+            return countries
+        case .failure(let error):
+            throw error
+        }
     }
 }
 
