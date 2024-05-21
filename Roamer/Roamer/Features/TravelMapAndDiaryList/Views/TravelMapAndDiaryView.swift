@@ -64,7 +64,7 @@ struct TravelMapAndDiaryView: View {
                         Image(systemName: "plus")
                             .foregroundColor(.pink)
                     }
-                    NavigationLink(destination: EmptyView()) {
+                    NavigationLink(destination: ProfileView()) {
                         Image(systemName: "person")
                             .foregroundColor(.pink)
                     }

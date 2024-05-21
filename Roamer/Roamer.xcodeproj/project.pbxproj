@@ -17,6 +17,17 @@
 		48CF619D2BEA9A4F00691E2A /* InteractiveMap in Frameworks */ = {isa = PBXBuildFile; productRef = 48CF619C2BEA9A4F00691E2A /* InteractiveMap */; };
 		48CF61A32BEA9B5500691E2A /* CountryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CF61A22BEA9B5500691E2A /* CountryRepository.swift */; };
 		48CF61AA2BEA9E0100691E2A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CF61A92BEA9E0100691E2A /* ViewModel.swift */; };
+		48FAE5DA2BFCA5740041462D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE5D92BFCA5740041462D /* LoginView.swift */; };
+		48FAE5DC2BFCA74C0041462D /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE5DB2BFCA74C0041462D /* InputView.swift */; };
+		48FAE5DE2BFCAC9E0041462D /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE5DD2BFCAC9E0041462D /* RegistrationView.swift */; };
+		48FAE5E02BFCB0AC0041462D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE5DF2BFCB0AC0041462D /* ProfileView.swift */; };
+		48FAE5E22BFCD5550041462D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE5E12BFCD5550041462D /* User.swift */; };
+		48FAE5E42BFCD9A90041462D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48FAE5E32BFCD9A90041462D /* GoogleService-Info.plist */; };
+		48FAE5E72BFCE90A0041462D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 48FAE5E62BFCE90A0041462D /* FirebaseAuth */; };
+		48FAE5E92BFCE90A0041462D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 48FAE5E82BFCE90A0041462D /* FirebaseFirestore */; };
+		48FAE5EB2BFCE90A0041462D /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 48FAE5EA2BFCE90A0041462D /* FirebaseFirestoreSwift */; };
+		48FAE5ED2BFCE90A0041462D /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 48FAE5EC2BFCE90A0041462D /* FirebaseStorage */; };
+		48FAE5EF2BFCEADC0041462D /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE5EE2BFCEADC0041462D /* AuthViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +54,13 @@
 		48CF61942BEA99B300691E2A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		48CF61A22BEA9B5500691E2A /* CountryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryRepository.swift; sourceTree = "<group>"; };
 		48CF61A92BEA9E0100691E2A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		48FAE5D92BFCA5740041462D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		48FAE5DB2BFCA74C0041462D /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		48FAE5DD2BFCAC9E0041462D /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		48FAE5DF2BFCB0AC0041462D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		48FAE5E12BFCD5550041462D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		48FAE5E32BFCD9A90041462D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		48FAE5EE2BFCEADC0041462D /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,8 +68,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48FAE5EB2BFCE90A0041462D /* FirebaseFirestoreSwift in Frameworks */,
 				48CF619D2BEA9A4F00691E2A /* InteractiveMap in Frameworks */,
+				48FAE5E92BFCE90A0041462D /* FirebaseFirestore in Frameworks */,
+				48FAE5E72BFCE90A0041462D /* FirebaseAuth in Frameworks */,
 				48C272B42BECC30700FEF91B /* Alamofire in Frameworks */,
+				48FAE5ED2BFCE90A0041462D /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +83,7 @@
 		48C272742BECB86C00FEF91B /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				48FAE5D82BFCA4790041462D /* Authentication */,
 				48C272822BECBAF300FEF91B /* CountriesList */,
 				48C2727E2BECBAB800FEF91B /* Flights */,
 				48C2727D2BECBA9500FEF91B /* TravelDiary */,
@@ -165,6 +188,7 @@
 				48CF618D2BEA99B100691E2A /* RoamerApp.swift */,
 				48CF618F2BEA99B100691E2A /* ContentView.swift */,
 				48CF61912BEA99B300691E2A /* Assets.xcassets */,
+				48FAE5E32BFCD9A90041462D /* GoogleService-Info.plist */,
 				48CF61932BEA99B300691E2A /* Preview Content */,
 			);
 			path = Roamer;
@@ -176,6 +200,43 @@
 				48CF61942BEA99B300691E2A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		48FAE5D82BFCA4790041462D /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				48FAE5F22BFCFDED0041462D /* Models */,
+				48FAE5F12BFCFDE60041462D /* ViewModel */,
+				48FAE5F02BFCFDE00041462D /* Views */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		48FAE5F02BFCFDE00041462D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				48FAE5DF2BFCB0AC0041462D /* ProfileView.swift */,
+				48FAE5DD2BFCAC9E0041462D /* RegistrationView.swift */,
+				48FAE5DB2BFCA74C0041462D /* InputView.swift */,
+				48FAE5D92BFCA5740041462D /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		48FAE5F12BFCFDE60041462D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				48FAE5EE2BFCEADC0041462D /* AuthViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		48FAE5F22BFCFDED0041462D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				48FAE5E12BFCD5550041462D /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +261,10 @@
 			packageProductDependencies = (
 				48CF619C2BEA9A4F00691E2A /* InteractiveMap */,
 				48C272B32BECC30700FEF91B /* Alamofire */,
+				48FAE5E62BFCE90A0041462D /* FirebaseAuth */,
+				48FAE5E82BFCE90A0041462D /* FirebaseFirestore */,
+				48FAE5EA2BFCE90A0041462D /* FirebaseFirestoreSwift */,
+				48FAE5EC2BFCE90A0041462D /* FirebaseStorage */,
 			);
 			productName = Roamer;
 			productReference = 48CF618A2BEA99B100691E2A /* Roamer.app */;
@@ -232,6 +297,7 @@
 			packageReferences = (
 				48CF619B2BEA9A4F00691E2A /* XCRemoteSwiftPackageReference "InteractiveMap" */,
 				48C272B22BECC30700FEF91B /* XCRemoteSwiftPackageReference "Alamofire" */,
+				48FAE5E52BFCE90A0041462D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 48CF618B2BEA99B100691E2A /* Products */;
 			projectDirPath = "";
@@ -248,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48CF61952BEA99B300691E2A /* Preview Assets.xcassets in Resources */,
+				48FAE5E42BFCD9A90041462D /* GoogleService-Info.plist in Resources */,
 				48CF61922BEA99B300691E2A /* Assets.xcassets in Resources */,
 				48C2727C2BECBA6C00FEF91B /* world-low.svg in Resources */,
 			);
@@ -260,11 +327,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48FAE5DA2BFCA5740041462D /* LoginView.swift in Sources */,
+				48FAE5DC2BFCA74C0041462D /* InputView.swift in Sources */,
 				48C272C52BEF46E500FEF91B /* TravelMapAndDiaryView.swift in Sources */,
 				48CF61AA2BEA9E0100691E2A /* ViewModel.swift in Sources */,
 				48CF61902BEA99B100691E2A /* ContentView.swift in Sources */,
 				48CF61A32BEA9B5500691E2A /* CountryRepository.swift in Sources */,
 				48CF618E2BEA99B100691E2A /* RoamerApp.swift in Sources */,
+				48FAE5EF2BFCEADC0041462D /* AuthViewModel.swift in Sources */,
+				48FAE5E02BFCB0AC0041462D /* ProfileView.swift in Sources */,
+				48FAE5E22BFCD5550041462D /* User.swift in Sources */,
+				48FAE5DE2BFCAC9E0041462D /* RegistrationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +584,14 @@
 				kind = branch;
 			};
 		};
+		48FAE5E52BFCE90A0041462D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.26.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -533,6 +614,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 48CF619B2BEA9A4F00691E2A /* XCRemoteSwiftPackageReference "InteractiveMap" */;
 			productName = InteractiveMap;
+		};
+		48FAE5E62BFCE90A0041462D /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48FAE5E52BFCE90A0041462D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		48FAE5E82BFCE90A0041462D /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48FAE5E52BFCE90A0041462D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		48FAE5EA2BFCE90A0041462D /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48FAE5E52BFCE90A0041462D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		48FAE5EC2BFCE90A0041462D /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48FAE5E52BFCE90A0041462D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
