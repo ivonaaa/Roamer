@@ -9,77 +9,67 @@ import SwiftUI
 import InteractiveMap
 
 struct TravelMapAndDiaryView: View {
-    @ObservedObject var viewModel = ViewModel()
+    @EnvironmentObject var viewModel: AuthViewModel
+    @ObservedObject var travelViewModel = TravelViewModel()
 
     var body: some View {
-        NavigationStack {
-            VStack {
-                InteractiveMap(svgName: "world-low") { pathData in
-                    InteractiveShape(pathData)
-                        .stroke(self.viewModel.myCountries.contains(pathData.name) ? .pink : .gray, lineWidth: 1)
-                        .background(InteractiveShape(pathData).fill(self.viewModel.myCountries.contains(pathData.name) ? .pink : .clear))
-                }
-                
-                Text("\(viewModel.myCountries.count)/195 countries visited")
-                    .font(.title)
-                    .foregroundColor(.white)
-                    .padding(.vertical, 40)
-                    .frame(maxWidth: .infinity)
-                    .background(
-                        RoundedRectangle(cornerRadius: 20)
-                            .fill(Color.pink)
-                    )
-                
-                List(viewModel.countries, id: \.self) { country in
-                    Button {
-                        viewModel.addCountryToMyCountries(country: country.countryCode)
-                    } label: {
-                        HStack {
-                            AsyncImage(url: URL(string: country.flag)) { image in
-                                            image
-                                                .resizable()
-                                                .scaledToFill()
-                                        } placeholder: {
-                                            ProgressView()
-                                        }
-                                        .frame(width: 30, height: 30)
-                                        .cornerRadius(20)
-
-                            Text(country.officialName)
-                            Text(country.countryCode)
-                        }
+        if let user = viewModel.currentUser {
+            NavigationStack {
+                VStack {
+                    InteractiveMap(svgName: "world-low") { pathData in
+                        InteractiveShape(pathData)
+                            .stroke(self.travelViewModel.myCountries.contains(pathData.name) ? .pink : .gray, lineWidth: 1)
+                            .background(InteractiveShape(pathData).fill(self.travelViewModel.myCountries.contains(pathData.name) ? .pink : .clear))
                     }
-                }
-                .listStyle(.plain)
-            }.padding()
-            .navigationBarItems(
-                leading: HStack {
-                    Text("Icon")
-                    Text("roamer")
+                    .frame(height: 250)
+                    
+                    Text("\(travelViewModel.myCountries.count)/195 countries visited")
                         .font(.title)
-                        .foregroundStyle(.pink)
-                },
-                trailing: HStack {
-                    NavigationLink(destination: ProfileView()) {
-                        Image(systemName: "person")
-                            .foregroundColor(.pink)
+                        .foregroundColor(.white)
+                        .padding(.vertical, 40)
+                        .frame(maxWidth: .infinity)
+                        .background(
+                            RoundedRectangle(cornerRadius: 20)
+                                .fill(Color.pink)
+                        )
+                    
+                    Spacer()
+                }
+                .padding()
+                .navigationBarItems(
+                    leading: HStack {
+                        Text("Icon")
+                        Text("roamer")
+                            .font(.title)
+                            .foregroundStyle(.pink)
+                    },
+                    trailing: HStack {
+                        NavigationLink(destination: ProfileView()) {
+                            Image(systemName: "person")
+                                .foregroundColor(.pink)
+                        }
+                        Menu {
+                            NavigationLink(destination: EmptyView()) {
+                                Label("Add travel", systemImage: "plus")
+                            }
+                            NavigationLink(destination: AddCountryView()) {
+                                Label("Add country", systemImage: "map")
+                            }
+                            NavigationLink(destination: EmptyView()) {
+                                Label("Explore countries", systemImage: "lightbulb")
+                            }
+                        } label: {
+                            Label("", systemImage: "ellipsis.circle")
+                                .foregroundColor(.pink)
+                        }
                     }
-                    Menu {
-                        NavigationLink(destination: EmptyView()) {
-                            Label("Add travel", systemImage: "plus")
-                        }
-                        NavigationLink(destination: EmptyView()) {
-                            Label("Add country", systemImage: "map")
-                        }
-                        NavigationLink(destination: EmptyView()) {
-                            Label("Explore countries", systemImage: "lightbulb")
-                        }
-                    } label: {
-                        Label("", systemImage: "ellipsis.circle")
-                            .foregroundColor(.pink)
+                )
+                .onAppear {
+                    Task {
+                        await travelViewModel.fetchMyCountries(userId: user.id)
                     }
                 }
-            )
+            }
         }
     }
 }

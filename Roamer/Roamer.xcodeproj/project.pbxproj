@@ -16,7 +16,7 @@
 		48CF61952BEA99B300691E2A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48CF61942BEA99B300691E2A /* Preview Assets.xcassets */; };
 		48CF619D2BEA9A4F00691E2A /* InteractiveMap in Frameworks */ = {isa = PBXBuildFile; productRef = 48CF619C2BEA9A4F00691E2A /* InteractiveMap */; };
 		48CF61A32BEA9B5500691E2A /* CountryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CF61A22BEA9B5500691E2A /* CountryRepository.swift */; };
-		48CF61AA2BEA9E0100691E2A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CF61A92BEA9E0100691E2A /* ViewModel.swift */; };
+		48CF61AA2BEA9E0100691E2A /* TravelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CF61A92BEA9E0100691E2A /* TravelViewModel.swift */; };
 		48FAE5DA2BFCA5740041462D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE5D92BFCA5740041462D /* LoginView.swift */; };
 		48FAE5DC2BFCA74C0041462D /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE5DB2BFCA74C0041462D /* InputView.swift */; };
 		48FAE5DE2BFCAC9E0041462D /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE5DD2BFCAC9E0041462D /* RegistrationView.swift */; };
@@ -28,6 +28,8 @@
 		48FAE5EB2BFCE90A0041462D /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 48FAE5EA2BFCE90A0041462D /* FirebaseFirestoreSwift */; };
 		48FAE5ED2BFCE90A0041462D /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 48FAE5EC2BFCE90A0041462D /* FirebaseStorage */; };
 		48FAE5EF2BFCEADC0041462D /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE5EE2BFCEADC0041462D /* AuthViewModel.swift */; };
+		48FAE5F72BFDFE640041462D /* AddCountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE5F62BFDFE640041462D /* AddCountryView.swift */; };
+		48FAE5F92BFDFF3B0041462D /* CountriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE5F82BFDFF3B0041462D /* CountriesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,7 +54,7 @@
 		48CF61912BEA99B300691E2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48CF61942BEA99B300691E2A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		48CF61A22BEA9B5500691E2A /* CountryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryRepository.swift; sourceTree = "<group>"; };
-		48CF61A92BEA9E0100691E2A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		48CF61A92BEA9E0100691E2A /* TravelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelViewModel.swift; sourceTree = "<group>"; };
 		48FAE5D92BFCA5740041462D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		48FAE5DB2BFCA74C0041462D /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		48FAE5DD2BFCAC9E0041462D /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
@@ -60,6 +62,8 @@
 		48FAE5E12BFCD5550041462D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		48FAE5E32BFCD9A90041462D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		48FAE5EE2BFCEADC0041462D /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		48FAE5F62BFDFE640041462D /* AddCountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCountryView.swift; sourceTree = "<group>"; };
+		48FAE5F82BFDFF3B0041462D /* CountriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +145,7 @@
 		48C272802BECBAD400FEF91B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				48CF61A92BEA9E0100691E2A /* ViewModel.swift */,
+				48CF61A92BEA9E0100691E2A /* TravelViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -156,6 +160,9 @@
 		48C272822BECBAF300FEF91B /* CountriesList */ = {
 			isa = PBXGroup;
 			children = (
+				48FAE5F52BFDFE390041462D /* Views */,
+				48FAE5F42BFDFE2E0041462D /* ViewModel */,
+				48FAE5F32BFDFE260041462D /* Models */,
 			);
 			path = CountriesList;
 			sourceTree = "<group>";
@@ -235,6 +242,29 @@
 				48FAE5E12BFCD5550041462D /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		48FAE5F32BFDFE260041462D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		48FAE5F42BFDFE2E0041462D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				48FAE5F82BFDFF3B0041462D /* CountriesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		48FAE5F52BFDFE390041462D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				48FAE5F62BFDFE640041462D /* AddCountryView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,7 +358,7 @@
 				48FAE5DA2BFCA5740041462D /* LoginView.swift in Sources */,
 				48FAE5DC2BFCA74C0041462D /* InputView.swift in Sources */,
 				48C272C52BEF46E500FEF91B /* TravelMapAndDiaryView.swift in Sources */,
-				48CF61AA2BEA9E0100691E2A /* ViewModel.swift in Sources */,
+				48CF61AA2BEA9E0100691E2A /* TravelViewModel.swift in Sources */,
 				48CF61902BEA99B100691E2A /* ContentView.swift in Sources */,
 				48CF61A32BEA9B5500691E2A /* CountryRepository.swift in Sources */,
 				48CF618E2BEA99B100691E2A /* RoamerApp.swift in Sources */,
@@ -336,6 +366,8 @@
 				48FAE5E02BFCB0AC0041462D /* ProfileView.swift in Sources */,
 				48FAE5E22BFCD5550041462D /* User.swift in Sources */,
 				48FAE5DE2BFCAC9E0041462D /* RegistrationView.swift in Sources */,
+				48FAE5F92BFDFF3B0041462D /* CountriesViewModel.swift in Sources */,
+				48FAE5F72BFDFE640041462D /* AddCountryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
