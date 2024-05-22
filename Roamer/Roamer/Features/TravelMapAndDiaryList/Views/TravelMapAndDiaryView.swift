@@ -60,12 +60,22 @@ struct TravelMapAndDiaryView: View {
                         .foregroundStyle(.pink)
                 },
                 trailing: HStack {
-                    NavigationLink(destination: EmptyView()) {
-                        Image(systemName: "plus")
-                            .foregroundColor(.pink)
-                    }
                     NavigationLink(destination: ProfileView()) {
                         Image(systemName: "person")
+                            .foregroundColor(.pink)
+                    }
+                    Menu {
+                        NavigationLink(destination: EmptyView()) {
+                            Label("Add travel", systemImage: "plus")
+                        }
+                        NavigationLink(destination: EmptyView()) {
+                            Label("Add country", systemImage: "map")
+                        }
+                        NavigationLink(destination: EmptyView()) {
+                            Label("Explore countries", systemImage: "lightbulb")
+                        }
+                    } label: {
+                        Label("", systemImage: "ellipsis.circle")
                             .foregroundColor(.pink)
                     }
                 }
