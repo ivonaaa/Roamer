@@ -30,6 +30,7 @@
 		48FAE5EF2BFCEADC0041462D /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE5EE2BFCEADC0041462D /* AuthViewModel.swift */; };
 		48FAE5F72BFDFE640041462D /* AddCountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE5F62BFDFE640041462D /* AddCountryView.swift */; };
 		48FAE5F92BFDFF3B0041462D /* CountriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE5F82BFDFF3B0041462D /* CountriesViewModel.swift */; };
+		48FAE5FE2BFE77310041462D /* CountryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE5FD2BFE77310041462D /* CountryResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -64,6 +65,7 @@
 		48FAE5EE2BFCEADC0041462D /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		48FAE5F62BFDFE640041462D /* AddCountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCountryView.swift; sourceTree = "<group>"; };
 		48FAE5F82BFDFF3B0041462D /* CountriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewModel.swift; sourceTree = "<group>"; };
+		48FAE5FD2BFE77310041462D /* CountryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +90,7 @@
 			children = (
 				48FAE5D82BFCA4790041462D /* Authentication */,
 				48C272822BECBAF300FEF91B /* CountriesList */,
-				48C2727E2BECBAB800FEF91B /* Flights */,
+				48C2727E2BECBAB800FEF91B /* CountryInformation */,
 				48C2727D2BECBA9500FEF91B /* TravelDiary */,
 				48C272772BECB8B200FEF91B /* TravelMapAndDiaryList */,
 			);
@@ -127,11 +129,14 @@
 			path = TravelDiary;
 			sourceTree = "<group>";
 		};
-		48C2727E2BECBAB800FEF91B /* Flights */ = {
+		48C2727E2BECBAB800FEF91B /* CountryInformation */ = {
 			isa = PBXGroup;
 			children = (
+				48FAE5FC2BFE77110041462D /* Models */,
+				48FAE5FB2BFE770B0041462D /* Views */,
+				48FAE5FA2BFE77030041462D /* ViewModel */,
 			);
-			path = Flights;
+			path = CountryInformation;
 			sourceTree = "<group>";
 		};
 		48C2727F2BECBAC800FEF91B /* Views */ = {
@@ -247,6 +252,7 @@
 		48FAE5F32BFDFE260041462D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				48FAE5FD2BFE77310041462D /* CountryResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -265,6 +271,27 @@
 				48FAE5F62BFDFE640041462D /* AddCountryView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		48FAE5FA2BFE77030041462D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		48FAE5FB2BFE770B0041462D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		48FAE5FC2BFE77110041462D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48FAE5DA2BFCA5740041462D /* LoginView.swift in Sources */,
+				48FAE5FE2BFE77310041462D /* CountryResponse.swift in Sources */,
 				48FAE5DC2BFCA74C0041462D /* InputView.swift in Sources */,
 				48C272C52BEF46E500FEF91B /* TravelMapAndDiaryView.swift in Sources */,
 				48CF61AA2BEA9E0100691E2A /* TravelViewModel.swift in Sources */,
