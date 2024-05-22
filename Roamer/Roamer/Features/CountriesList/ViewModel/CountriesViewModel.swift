@@ -58,4 +58,16 @@ class CountriesViewModel: ObservableObject {
             print("Failed to update user's countries: \(error)")
         }
     }
+    
+    func deleteCountryFromMyCountries(country: String, userId: String) async {
+        guard let index = myCountries.firstIndex(of: country) else { return }
+        myCountries.remove(at: index)
+        
+        do {
+            try await Firestore.firestore().collection("countries").document(userId).setData(["myCountries": myCountries], merge: true)
+        } catch {
+            print("Failed to update user's countries: \(error)")
+        }
+    }
+
 }

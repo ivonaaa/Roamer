@@ -43,6 +43,18 @@ struct AddCountryView: View {
                                         .imageScale(.large)
                                         .fontWeight(.bold)
                                         .foregroundColor(.green)
+                                    
+                                    Button(action: {
+                                        Task {
+                                            await countriesViewModel.deleteCountryFromMyCountries(country:country.countryCode, userId: user.id)
+                                        }
+                                        dismiss()
+                                    }, label: {
+                                        Image(systemName: "trash.circle.fill")
+                                            .imageScale(.large)
+                                            .fontWeight(.bold)
+                                            .foregroundColor(.red)
+                                    })
                                 }
                             }
                         }
