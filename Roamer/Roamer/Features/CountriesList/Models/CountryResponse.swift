@@ -11,11 +11,11 @@ struct CountryResponse: Codable {
     let flags: Flag
 }
 
-struct Name: Codable {
+struct Name: Codable, Hashable {
     let official: String
 }
 
-struct Flag: Codable {
+struct Flag: Codable, Hashable {
     let png: String
 }
 

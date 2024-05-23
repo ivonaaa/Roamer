@@ -31,6 +31,9 @@
 		48FAE5F72BFDFE640041462D /* AddCountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE5F62BFDFE640041462D /* AddCountryView.swift */; };
 		48FAE5F92BFDFF3B0041462D /* CountriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE5F82BFDFF3B0041462D /* CountriesViewModel.swift */; };
 		48FAE5FE2BFE77310041462D /* CountryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE5FD2BFE77310041462D /* CountryResponse.swift */; };
+		48FAE6002BFE789F0041462D /* ConutryInformationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE5FF2BFE789F0041462D /* ConutryInformationList.swift */; };
+		48FAE6022BFE78E30041462D /* CountryInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE6012BFE78E30041462D /* CountryInformationViewModel.swift */; };
+		48FAE6042BFE7E450041462D /* CountryInformationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE6032BFE7E450041462D /* CountryInformationRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -66,6 +69,9 @@
 		48FAE5F62BFDFE640041462D /* AddCountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCountryView.swift; sourceTree = "<group>"; };
 		48FAE5F82BFDFF3B0041462D /* CountriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewModel.swift; sourceTree = "<group>"; };
 		48FAE5FD2BFE77310041462D /* CountryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryResponse.swift; sourceTree = "<group>"; };
+		48FAE5FF2BFE789F0041462D /* ConutryInformationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConutryInformationList.swift; sourceTree = "<group>"; };
+		48FAE6012BFE78E30041462D /* CountryInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInformationViewModel.swift; sourceTree = "<group>"; };
+		48FAE6032BFE7E450041462D /* CountryInformationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInformationRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				48CF61A22BEA9B5500691E2A /* CountryRepository.swift */,
+				48FAE6032BFE7E450041462D /* CountryInformationRepository.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -276,6 +283,7 @@
 		48FAE5FA2BFE77030041462D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				48FAE6012BFE78E30041462D /* CountryInformationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -283,6 +291,7 @@
 		48FAE5FB2BFE770B0041462D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				48FAE5FF2BFE789F0041462D /* ConutryInformationList.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -383,17 +392,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				48FAE5DA2BFCA5740041462D /* LoginView.swift in Sources */,
+				48FAE6042BFE7E450041462D /* CountryInformationRepository.swift in Sources */,
 				48FAE5FE2BFE77310041462D /* CountryResponse.swift in Sources */,
 				48FAE5DC2BFCA74C0041462D /* InputView.swift in Sources */,
 				48C272C52BEF46E500FEF91B /* TravelMapAndDiaryView.swift in Sources */,
 				48CF61AA2BEA9E0100691E2A /* TravelViewModel.swift in Sources */,
 				48CF61902BEA99B100691E2A /* ContentView.swift in Sources */,
+				48FAE6022BFE78E30041462D /* CountryInformationViewModel.swift in Sources */,
 				48CF61A32BEA9B5500691E2A /* CountryRepository.swift in Sources */,
 				48CF618E2BEA99B100691E2A /* RoamerApp.swift in Sources */,
 				48FAE5EF2BFCEADC0041462D /* AuthViewModel.swift in Sources */,
 				48FAE5E02BFCB0AC0041462D /* ProfileView.swift in Sources */,
 				48FAE5E22BFCD5550041462D /* User.swift in Sources */,
 				48FAE5DE2BFCAC9E0041462D /* RegistrationView.swift in Sources */,
+				48FAE6002BFE789F0041462D /* ConutryInformationList.swift in Sources */,
 				48FAE5F92BFDFF3B0041462D /* CountriesViewModel.swift in Sources */,
 				48FAE5F72BFDFE640041462D /* AddCountryView.swift in Sources */,
 			);
