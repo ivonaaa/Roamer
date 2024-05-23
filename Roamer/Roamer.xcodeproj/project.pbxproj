@@ -40,6 +40,14 @@
 		48FAE60C2BFF43600041462D /* CountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE60B2BFF43600041462D /* CountryView.swift */; };
 		48FAE60E2BFF4FA60041462D /* GeocodingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE60D2BFF4FA60041462D /* GeocodingViewModel.swift */; };
 		48FAE6102BFF4FD00041462D /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE60F2BFF4FCF0041462D /* MapView.swift */; };
+		48FAE6152BFF5E950041462D /* DiaryInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE6142BFF5E950041462D /* DiaryInputView.swift */; };
+		48FAE6172BFF6EDD0041462D /* TravelDiaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE6162BFF6EDD0041462D /* TravelDiaryViewModel.swift */; };
+		48FAE6192BFF6F110041462D /* Travel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE6182BFF6F110041462D /* Travel.swift */; };
+		48FAE61B2BFF6F380041462D /* TravelListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE61A2BFF6F380041462D /* TravelListView.swift */; };
+		48FAE61D2BFF88B70041462D /* TravelDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE61C2BFF88B70041462D /* TravelDetailView.swift */; };
+		48FAE61F2BFF89AB0041462D /* TravelRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE61E2BFF89AB0041462D /* TravelRowView.swift */; };
+		48FAE6212BFFA0CA0041462D /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE6202BFFA0CA0041462D /* ImagePicker.swift */; };
+		48FAE6232BFFA0FC0041462D /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE6222BFFA0FC0041462D /* TextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -84,6 +92,14 @@
 		48FAE60B2BFF43600041462D /* CountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryView.swift; sourceTree = "<group>"; };
 		48FAE60D2BFF4FA60041462D /* GeocodingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodingViewModel.swift; sourceTree = "<group>"; };
 		48FAE60F2BFF4FCF0041462D /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		48FAE6142BFF5E950041462D /* DiaryInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryInputView.swift; sourceTree = "<group>"; };
+		48FAE6162BFF6EDD0041462D /* TravelDiaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDiaryViewModel.swift; sourceTree = "<group>"; };
+		48FAE6182BFF6F110041462D /* Travel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel.swift; sourceTree = "<group>"; };
+		48FAE61A2BFF6F380041462D /* TravelListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelListView.swift; sourceTree = "<group>"; };
+		48FAE61C2BFF88B70041462D /* TravelDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDetailView.swift; sourceTree = "<group>"; };
+		48FAE61E2BFF89AB0041462D /* TravelRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelRowView.swift; sourceTree = "<group>"; };
+		48FAE6202BFFA0CA0041462D /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		48FAE6222BFFA0FC0041462D /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +160,9 @@
 		48C2727D2BECBA9500FEF91B /* TravelDiary */ = {
 			isa = PBXGroup;
 			children = (
+				48FAE6132BFF5E7D0041462D /* Models */,
+				48FAE6122BFF5E770041462D /* ViewModel */,
+				48FAE6112BFF5E6F0041462D /* Views */,
 			);
 			path = TravelDiary;
 			sourceTree = "<group>";
@@ -321,6 +340,35 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		48FAE6112BFF5E6F0041462D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				48FAE6142BFF5E950041462D /* DiaryInputView.swift */,
+				48FAE6202BFFA0CA0041462D /* ImagePicker.swift */,
+				48FAE61A2BFF6F380041462D /* TravelListView.swift */,
+				48FAE61C2BFF88B70041462D /* TravelDetailView.swift */,
+				48FAE61E2BFF89AB0041462D /* TravelRowView.swift */,
+				48FAE6222BFFA0FC0041462D /* TextView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		48FAE6122BFF5E770041462D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				48FAE6162BFF6EDD0041462D /* TravelDiaryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		48FAE6132BFF5E7D0041462D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				48FAE6182BFF6F110041462D /* Travel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -410,16 +458,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				48FAE5DA2BFCA5740041462D /* LoginView.swift in Sources */,
+				48FAE61D2BFF88B70041462D /* TravelDetailView.swift in Sources */,
 				48FAE6042BFE7E450041462D /* CountryInformationRepository.swift in Sources */,
 				48FAE5FE2BFE77310041462D /* CountryResponse.swift in Sources */,
+				48FAE6172BFF6EDD0041462D /* TravelDiaryViewModel.swift in Sources */,
+				48FAE6152BFF5E950041462D /* DiaryInputView.swift in Sources */,
 				48FAE6062BFF347B0041462D /* CountryInformation.swift in Sources */,
 				48FAE60A2BFF43400041462D /* CountryDetailView.swift in Sources */,
+				48FAE61B2BFF6F380041462D /* TravelListView.swift in Sources */,
 				48FAE5DC2BFCA74C0041462D /* InputView.swift in Sources */,
+				48FAE61F2BFF89AB0041462D /* TravelRowView.swift in Sources */,
+				48FAE6232BFFA0FC0041462D /* TextView.swift in Sources */,
 				48C272C52BEF46E500FEF91B /* TravelMapAndDiaryView.swift in Sources */,
 				48CF61AA2BEA9E0100691E2A /* TravelViewModel.swift in Sources */,
 				48CF61902BEA99B100691E2A /* ContentView.swift in Sources */,
 				48FAE6102BFF4FD00041462D /* MapView.swift in Sources */,
 				48FAE6022BFE78E30041462D /* CountryInformationViewModel.swift in Sources */,
+				48FAE6192BFF6F110041462D /* Travel.swift in Sources */,
 				48FAE60E2BFF4FA60041462D /* GeocodingViewModel.swift in Sources */,
 				48CF61A32BEA9B5500691E2A /* CountryRepository.swift in Sources */,
 				48CF618E2BEA99B100691E2A /* RoamerApp.swift in Sources */,
@@ -430,6 +485,7 @@
 				48FAE5DE2BFCAC9E0041462D /* RegistrationView.swift in Sources */,
 				48FAE6082BFF43030041462D /* RegionScrollView.swift in Sources */,
 				48FAE6002BFE789F0041462D /* ConutryInformationListView.swift in Sources */,
+				48FAE6212BFFA0CA0041462D /* ImagePicker.swift in Sources */,
 				48FAE5F92BFDFF3B0041462D /* CountriesViewModel.swift in Sources */,
 				48FAE5F72BFDFE640041462D /* AddCountryView.swift in Sources */,
 			);

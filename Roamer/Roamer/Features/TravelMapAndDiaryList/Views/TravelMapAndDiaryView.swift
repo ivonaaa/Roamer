@@ -72,7 +72,7 @@ struct TravelMapAndDiaryView: View {
                                 .foregroundColor(.pink)
                         }
                         Menu {
-                            NavigationLink(destination: EmptyView()) {
+                            NavigationLink(destination: TravelListView()) {
                                 Label("Add travel", systemImage: "plus")
                             }
                             NavigationLink(destination: AddCountryView()) {

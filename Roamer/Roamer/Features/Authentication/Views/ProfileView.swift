@@ -51,23 +51,6 @@ struct ProfileView: View {
                                 .foregroundColor(.black)
                         }
                     })
-                    
-                    Button(action: {
-                        Task {
-                            await viewModel.deleteAccount()
-                        }
-                    }, label: {
-                        HStack {
-                            Image(systemName: "xmark.circle.fill")
-                                .imageScale(.small)
-                                .font(.title)
-                                .foregroundColor(.pink)
-                            
-                            Text("Delete account")
-                                .font(.subheadline)
-                                .foregroundColor(.black)
-                        }
-                    })
                 }
             }
         }
