@@ -94,6 +94,8 @@ struct DiaryInputView: View {
                 .opacity(formIsValid ? 1.0 : 0.5)
                 .foregroundColor(.white)
                 .cornerRadius(10)
+                .navigationBarBackButtonHidden(true)
+                .navigationBarItems(leading: CustomBackButton())
             }
         }
     }

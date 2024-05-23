@@ -21,6 +21,8 @@ struct ConutryInformationListView: View {
                 RegionScrollView(regionName: "Oceania", countries: countriesViewModel.oceaniaCountries)
                 RegionScrollView(regionName: "Antarctica", countries: countriesViewModel.antarcticaCountries)
             }
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: CustomBackButton())
         }
     }
 }

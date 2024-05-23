@@ -68,6 +68,8 @@ struct AddCountryView: View {
                         await countriesViewModel.fetchMyCountries(userId: user.id)
                     }
                 }
+                .navigationBarBackButtonHidden(true)
+                .navigationBarItems(leading: CustomBackButton())
             }
         }
     }

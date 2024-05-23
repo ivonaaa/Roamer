@@ -53,6 +53,8 @@ struct ProfileView: View {
                     })
                 }
             }
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: CustomBackButton())
         }
     }
 }

@@ -43,6 +43,8 @@ struct TravelListView: View {
                     await viewModel.fetchTravels(userId: user.id)
                 }
             }
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: CustomBackButton())
         }
     }
 }

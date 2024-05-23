@@ -101,5 +101,7 @@ struct CountryDetailView: View {
                 geocodingViewModel.geocode(address: country.name.common)
             }
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: CustomBackButton())
     }
 }
