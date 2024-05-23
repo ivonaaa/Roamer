@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		48C2727C2BECBA6C00FEF91B /* world-low.svg in Resources */ = {isa = PBXBuildFile; fileRef = 48C2727B2BECBA6C00FEF91B /* world-low.svg */; };
 		48C272B42BECC30700FEF91B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 48C272B32BECC30700FEF91B /* Alamofire */; };
-		48C272C52BEF46E500FEF91B /* TravelMapAndDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C272C42BEF46E500FEF91B /* TravelMapAndDiaryView.swift */; };
+		48C272C52BEF46E500FEF91B /* TravelMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C272C42BEF46E500FEF91B /* TravelMapView.swift */; };
 		48CF618E2BEA99B100691E2A /* RoamerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CF618D2BEA99B100691E2A /* RoamerApp.swift */; };
 		48CF61902BEA99B100691E2A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CF618F2BEA99B100691E2A /* ContentView.swift */; };
 		48CF61922BEA99B300691E2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48CF61912BEA99B300691E2A /* Assets.xcassets */; };
@@ -49,6 +49,8 @@
 		48FAE6212BFFA0CA0041462D /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE6202BFFA0CA0041462D /* ImagePicker.swift */; };
 		48FAE6232BFFA0FC0041462D /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE6222BFFA0FC0041462D /* TextView.swift */; };
 		48FAE6252BFFBF890041462D /* accessCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE6242BFFBF880041462D /* accessCameraView.swift */; };
+		48FAE6272BFFD7E90041462D /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE6262BFFD7E90041462D /* ProgressBar.swift */; };
+		48FAE6292BFFDCF50041462D /* CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE6282BFFDCF50041462D /* CustomBackButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -66,7 +68,7 @@
 
 /* Begin PBXFileReference section */
 		48C2727B2BECBA6C00FEF91B /* world-low.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "world-low.svg"; path = "../../../../Downloads/world-low.svg"; sourceTree = "<group>"; };
-		48C272C42BEF46E500FEF91B /* TravelMapAndDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelMapAndDiaryView.swift; sourceTree = "<group>"; };
+		48C272C42BEF46E500FEF91B /* TravelMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelMapView.swift; sourceTree = "<group>"; };
 		48CF618A2BEA99B100691E2A /* Roamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roamer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48CF618D2BEA99B100691E2A /* RoamerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoamerApp.swift; sourceTree = "<group>"; };
 		48CF618F2BEA99B100691E2A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,6 +104,8 @@
 		48FAE6202BFFA0CA0041462D /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		48FAE6222BFFA0FC0041462D /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		48FAE6242BFFBF880041462D /* accessCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accessCameraView.swift; sourceTree = "<group>"; };
+		48FAE6262BFFD7E90041462D /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		48FAE6282BFFDCF50041462D /* CustomBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,7 +186,9 @@
 		48C2727F2BECBAC800FEF91B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				48C272C42BEF46E500FEF91B /* TravelMapAndDiaryView.swift */,
+				48C272C42BEF46E500FEF91B /* TravelMapView.swift */,
+				48FAE6262BFFD7E90041462D /* ProgressBar.swift */,
+				48FAE6282BFFDCF50041462D /* CustomBackButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -461,6 +467,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48FAE5DA2BFCA5740041462D /* LoginView.swift in Sources */,
+				48FAE6272BFFD7E90041462D /* ProgressBar.swift in Sources */,
 				48FAE61D2BFF88B70041462D /* TravelDetailView.swift in Sources */,
 				48FAE6042BFE7E450041462D /* CountryInformationRepository.swift in Sources */,
 				48FAE5FE2BFE77310041462D /* CountryResponse.swift in Sources */,
@@ -473,7 +480,7 @@
 				48FAE5DC2BFCA74C0041462D /* InputView.swift in Sources */,
 				48FAE61F2BFF89AB0041462D /* TravelRowView.swift in Sources */,
 				48FAE6232BFFA0FC0041462D /* TextView.swift in Sources */,
-				48C272C52BEF46E500FEF91B /* TravelMapAndDiaryView.swift in Sources */,
+				48C272C52BEF46E500FEF91B /* TravelMapView.swift in Sources */,
 				48CF61AA2BEA9E0100691E2A /* TravelViewModel.swift in Sources */,
 				48CF61902BEA99B100691E2A /* ContentView.swift in Sources */,
 				48FAE6102BFF4FD00041462D /* MapView.swift in Sources */,
@@ -484,6 +491,7 @@
 				48CF618E2BEA99B100691E2A /* RoamerApp.swift in Sources */,
 				48FAE60C2BFF43600041462D /* CountryView.swift in Sources */,
 				48FAE5EF2BFCEADC0041462D /* AuthViewModel.swift in Sources */,
+				48FAE6292BFFDCF50041462D /* CustomBackButton.swift in Sources */,
 				48FAE5E02BFCB0AC0041462D /* ProfileView.swift in Sources */,
 				48FAE5E22BFCD5550041462D /* User.swift in Sources */,
 				48FAE5DE2BFCAC9E0041462D /* RegistrationView.swift in Sources */,
