@@ -62,7 +62,8 @@ struct DiaryInputView: View {
                 TextView(
                     text: $travelDescription
                 )
-                .frame(width: UIScreen.main.bounds.width - 32, height: 300)
+                .padding(.horizontal, 22)
+                .frame(minWidth: 9, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
                 
                 Spacer()
                 
@@ -76,7 +77,6 @@ struct DiaryInputView: View {
                 .background(.pink)
                 .disabled(!formIsValid)
                 .opacity(formIsValid ? 1.0 : 0.5)
-                .padding()
                 .foregroundColor(.white)
                 .cornerRadius(10)
             }

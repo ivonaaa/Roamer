@@ -21,12 +21,16 @@ struct TravelRowView: View {
             }
             .frame(width: 70, height: 70)
             .cornerRadius(35)
+            .padding(.leading, 30)
             
             Text(travel.title)
                 .font(.title2)
                 .lineLimit(2)
                 .multilineTextAlignment(.leading)
                 .fontDesign(.serif)
+                .padding(.leading, 15)
+            
+            Spacer()
         }
         .frame(width: UIScreen.main.bounds.width - 30 , height: 80)
     }
