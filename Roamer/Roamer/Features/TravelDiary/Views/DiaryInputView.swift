@@ -12,12 +12,13 @@ struct DiaryInputView: View {
     @EnvironmentObject var authViewModel: AuthViewModel
     @StateObject var viewModel: TravelDiaryViewModel
     @State private var showingImagePicker = false
-    @State private var showWarrning = false
+    @State private var showCamera = false
+    
     @State private var inputImage: UIImage?
     @State var travelTitle = ""
     @State var travelDescription = ""
-    @Environment(\.dismiss) var dismiss
     
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         if let user = authViewModel.currentUser {
@@ -26,9 +27,18 @@ struct DiaryInputView: View {
                     .font(.title2)
                 
                 HStack {
-                    Button {
-                        showingImagePicker = true
-                    } label: {
+                        Menu {
+                            Button {
+                                showCamera.toggle()
+                            } label: {
+                                Label("Take foto", systemImage: "camera")
+                            }
+                            Button {
+                                showingImagePicker.toggle()
+                            } label: {
+                                Label("Choose from gallery", systemImage: "photo")
+                            }
+                        } label: {
                         VStack {
                             if let image = self.inputImage {
                                 Image(uiImage: image)
@@ -43,9 +53,14 @@ struct DiaryInputView: View {
                                     .foregroundColor(.pink)
                             }
                         }.padding(.horizontal)
-                    }.fullScreenCover(isPresented: $showingImagePicker, onDismiss: nil, content: {
+                    }
+                    .fullScreenCover(isPresented: $showingImagePicker, onDismiss: nil, content: {
                         ImagePicker(image: $inputImage)
                     })
+                    .fullScreenCover(isPresented: self.$showCamera, onDismiss: nil, content: {
+                        accessCameraView(selectedImage: self.$inputImage)
+                    })
+                    
                     Spacer()
                     
                     VStack{

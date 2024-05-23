@@ -73,7 +73,7 @@ struct TravelMapAndDiaryView: View {
                         }
                         Menu {
                             NavigationLink(destination: TravelListView()) {
-                                Label("Add travel", systemImage: "plus")
+                                Label("My travels", systemImage: "mappin.and.ellipse")
                             }
                             NavigationLink(destination: AddCountryView()) {
                                 Label("Add country", systemImage: "map")

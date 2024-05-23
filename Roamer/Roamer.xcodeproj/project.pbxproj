@@ -48,6 +48,7 @@
 		48FAE61F2BFF89AB0041462D /* TravelRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE61E2BFF89AB0041462D /* TravelRowView.swift */; };
 		48FAE6212BFFA0CA0041462D /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE6202BFFA0CA0041462D /* ImagePicker.swift */; };
 		48FAE6232BFFA0FC0041462D /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE6222BFFA0FC0041462D /* TextView.swift */; };
+		48FAE6252BFFBF890041462D /* accessCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE6242BFFBF880041462D /* accessCameraView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -100,6 +101,7 @@
 		48FAE61E2BFF89AB0041462D /* TravelRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelRowView.swift; sourceTree = "<group>"; };
 		48FAE6202BFFA0CA0041462D /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		48FAE6222BFFA0FC0041462D /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		48FAE6242BFFBF880041462D /* accessCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accessCameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -349,6 +351,7 @@
 				48FAE61C2BFF88B70041462D /* TravelDetailView.swift */,
 				48FAE61E2BFF89AB0041462D /* TravelRowView.swift */,
 				48FAE6222BFFA0FC0041462D /* TextView.swift */,
+				48FAE6242BFFBF880041462D /* accessCameraView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				48FAE6172BFF6EDD0041462D /* TravelDiaryViewModel.swift in Sources */,
 				48FAE6152BFF5E950041462D /* DiaryInputView.swift in Sources */,
 				48FAE6062BFF347B0041462D /* CountryInformation.swift in Sources */,
+				48FAE6252BFFBF890041462D /* accessCameraView.swift in Sources */,
 				48FAE60A2BFF43400041462D /* CountryDetailView.swift in Sources */,
 				48FAE61B2BFF6F380041462D /* TravelListView.swift in Sources */,
 				48FAE5DC2BFCA74C0041462D /* InputView.swift in Sources */,
@@ -636,6 +640,7 @@
 				DEVELOPMENT_TEAM = 85HY74LC9S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs camera usage.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -646,6 +651,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "hr.dice.ivona-perko.Roamer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -667,6 +673,7 @@
 				DEVELOPMENT_TEAM = 85HY74LC9S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs camera usage.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -677,6 +684,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "hr.dice.ivona-perko.Roamer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
