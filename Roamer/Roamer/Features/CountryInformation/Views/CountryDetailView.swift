@@ -50,15 +50,6 @@ struct CountryDetailView: View {
                     }
                     Spacer()
                     VStack {
-                        Text(country.continents[0])
-                            .font(.title2)
-                            .font(.system(size: 20))
-                            .bold()
-                        Text("continent")
-                            .font(.footnote)
-                    }
-                    Spacer()
-                    VStack {
                         Text(String(country.population))
                             .font(.title2)
                             .font(.system(size: 20))
@@ -69,6 +60,15 @@ struct CountryDetailView: View {
                     Spacer()
                 }
                 .padding(.horizontal)
+                
+                VStack {
+                    Text(country.continents[0])
+                        .font(.title2)
+                        .font(.system(size: 20))
+                        .bold()
+                    Text("continent")
+                        .font(.footnote)
+                }
                 
                 VStack {
                     if !country.capital.isEmpty {
