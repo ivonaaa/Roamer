@@ -27,7 +27,7 @@ class TravelViewModel: ObservableObject {
             let responses = try await countryRepository.fetchCountries()
             self.countries = responses.map { country in
                 Country(
-                    officialName: country.name.official,
+                    officialName: country.name.common,
                     countryCode: country.altSpellings.first ?? "",
                     flag: country.flags.png
                 )
