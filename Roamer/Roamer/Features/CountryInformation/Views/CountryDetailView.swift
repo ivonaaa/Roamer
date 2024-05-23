@@ -71,18 +71,24 @@ struct CountryDetailView: View {
                 .padding(.horizontal)
                 
                 VStack {
-                    Text(country.capital[0])
-                        .font(.title)
-                        .bold()
-                    Text("capital")
-                        .font(.footnote)
+                    if !country.capital.isEmpty {
+                        Text(country.capital[0])
+                            .font(.title)
+                            .bold()
+                        Text("capital")
+                            .font(.footnote)
+                    }
                 }
             }
             Spacer()
         }
         .padding(.horizontal)
         .onAppear {
-            geocodingViewModel.geocode(address: country.capital[0])
+            if !country.capital.isEmpty {
+                geocodingViewModel.geocode(address: country.capital[0])
+            } else {
+                geocodingViewModel.geocode(address: country.name.common)
+            }
         }
     }
 }
