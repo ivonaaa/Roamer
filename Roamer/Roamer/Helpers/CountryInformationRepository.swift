@@ -10,7 +10,7 @@ import Alamofire
 
 class CountryInformationRepository {
     func fetchCountries() async throws -> [CountryDetail] {
-        let url = "https://restcountries.com/v3.1/all?fields=name,region,population,capital,flags"
+        let url = "https://restcountries.com/v3.1/all?fields=name,continents,population,capital,flags"
         let dataRequest = AF
             .request(url)
             .validate()
@@ -24,12 +24,4 @@ class CountryInformationRepository {
             throw error
         }
     }
-}
-
-struct CountryDetail: Codable, Hashable {
-    let name: Name
-    let region: String
-    let population: Int
-    let capital: [String]
-    let flags: Flag
 }
