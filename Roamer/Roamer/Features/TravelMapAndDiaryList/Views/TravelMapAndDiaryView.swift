@@ -78,7 +78,7 @@ struct TravelMapAndDiaryView: View {
                             NavigationLink(destination: AddCountryView()) {
                                 Label("Add country", systemImage: "map")
                             }
-                            NavigationLink(destination: ConutryInformationList()) {
+                            NavigationLink(destination: ConutryInformationListView()) {
                                 Label("Explore countries", systemImage: "lightbulb")
                             }
                         } label: {
