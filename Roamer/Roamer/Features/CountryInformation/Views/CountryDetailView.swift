@@ -19,7 +19,7 @@ struct CountryDetailView: View {
             
             if let coordinate = geocodingViewModel.coordinate {
                 MapView(coordinate: coordinate)
-                    .frame(height: 200)
+                    .frame(width: UIScreen.main.bounds.width - 20, height: 200)
                     .cornerRadius(10)
                     .padding(.vertical, 20)
             } else {
@@ -59,7 +59,10 @@ struct CountryDetailView: View {
                     }
                     Spacer()
                 }
-                .padding(.horizontal)
+                .frame(width: UIScreen.main.bounds.width - 20)
+                .padding(.vertical)
+                .background(Color.pink.opacity(0.2))
+                .cornerRadius(10)
                 
                 VStack {
                     Text(country.continents[0])
@@ -69,15 +72,23 @@ struct CountryDetailView: View {
                     Text("continent")
                         .font(.footnote)
                 }
+                .frame(width: UIScreen.main.bounds.width - 20)
+                .padding(.vertical)
+                .background(Color.pink.opacity(0.2))
+                .cornerRadius(10)
                 
-                VStack {
-                    if !country.capital.isEmpty {
+                if !country.capital.isEmpty {
+                    VStack {
                         Text(country.capital[0])
                             .font(.title)
                             .bold()
                         Text("capital")
                             .font(.footnote)
                     }
+                    .frame(width: UIScreen.main.bounds.width - 20)
+                    .padding(.vertical)
+                    .background(Color.pink.opacity(0.2))
+                    .cornerRadius(10)
                 }
             }
             Spacer()
