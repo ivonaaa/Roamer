@@ -79,12 +79,6 @@ struct TravelMapView: View {
                 .padding()
                 .navigationBarItems(
                     leading: HStack {
-                        Image("icon") 
-                            .renderingMode(.template)
-                            .font(.footnote)
-                            .foregroundColor(.pink)
-                            .padding(.vertical)
-                        
                         Text("roamer")
                             .font(.largeTitle)
                             .foregroundStyle(.pink)

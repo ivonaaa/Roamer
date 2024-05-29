@@ -24,7 +24,8 @@ struct CountryDetailView: View {
                     .padding(.vertical, 20)
             } else {
                 ProgressView()
-                    .frame(height: 200)
+                    .frame(width: UIScreen.main.bounds.width - 20, height: 200)
+                    .padding(.vertical, 20)
             }
             
             VStack(alignment: .center, spacing: 20) {

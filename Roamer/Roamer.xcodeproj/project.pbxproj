@@ -148,17 +148,9 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		48C272762BECB89900FEF91B /* SupportingFiles */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SupportingFiles;
-			sourceTree = "<group>";
-		};
 		48C272772BECB8B200FEF91B /* TravelMapAndDiaryList */ = {
 			isa = PBXGroup;
 			children = (
-				48C272812BECBADB00FEF91B /* Models */,
 				48C272802BECBAD400FEF91B /* ViewModel */,
 				48C2727F2BECBAC800FEF91B /* Views */,
 			);
@@ -203,13 +195,6 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		48C272812BECBADB00FEF91B /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		48C272822BECBAF300FEF91B /* CountriesList */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,7 +225,6 @@
 			isa = PBXGroup;
 			children = (
 				48C2727B2BECBA6C00FEF91B /* world-low.svg */,
-				48C272762BECB89900FEF91B /* SupportingFiles */,
 				48C272752BECB89200FEF91B /* Helpers */,
 				48C272742BECB86C00FEF91B /* Features */,
 				48CF618D2BEA99B100691E2A /* RoamerApp.swift */,
