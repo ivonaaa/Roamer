@@ -51,6 +51,7 @@
 		48FAE6252BFFBF890041462D /* accessCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE6242BFFBF880041462D /* accessCameraView.swift */; };
 		48FAE6272BFFD7E90041462D /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE6262BFFD7E90041462D /* ProgressBar.swift */; };
 		48FAE6292BFFDCF50041462D /* CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE6282BFFDCF50041462D /* CustomBackButton.swift */; };
+		48FAE62B2C071D0D0041462D /* EditDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE62A2C071D0D0041462D /* EditDiaryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -106,6 +107,7 @@
 		48FAE6242BFFBF880041462D /* accessCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accessCameraView.swift; sourceTree = "<group>"; };
 		48FAE6262BFFD7E90041462D /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		48FAE6282BFFDCF50041462D /* CustomBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackButton.swift; sourceTree = "<group>"; };
+		48FAE62A2C071D0D0041462D /* EditDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDiaryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -358,6 +360,7 @@
 				48FAE61E2BFF89AB0041462D /* TravelRowView.swift */,
 				48FAE6222BFFA0FC0041462D /* TextView.swift */,
 				48FAE6242BFFBF880041462D /* accessCameraView.swift */,
+				48FAE62A2C071D0D0041462D /* EditDiaryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 				48CF61AA2BEA9E0100691E2A /* TravelViewModel.swift in Sources */,
 				48CF61902BEA99B100691E2A /* ContentView.swift in Sources */,
 				48FAE6102BFF4FD00041462D /* MapView.swift in Sources */,
+				48FAE62B2C071D0D0041462D /* EditDiaryView.swift in Sources */,
 				48FAE6022BFE78E30041462D /* CountryInformationViewModel.swift in Sources */,
 				48FAE6192BFF6F110041462D /* Travel.swift in Sources */,
 				48FAE60E2BFF4FA60041462D /* GeocodingViewModel.swift in Sources */,

@@ -1,44 +1,53 @@
 //
-//  DiaryInputView.swift
+//  EditDiaryView.swift
 //  Roamer
 //
-//  Created by Ivona Perko on 23.05.2024..
+//  Created by Ivona Perko on 29.05.2024..
 //
 
 import PhotosUI
 import SwiftUI
 
-struct DiaryInputView: View {
+struct EditDiaryView: View {
     @EnvironmentObject var authViewModel: AuthViewModel
     @StateObject var viewModel: TravelDiaryViewModel
+    @Binding var travel: Travel
+    
     @State private var showingImagePicker = false
     @State private var showCamera = false
     
     @State private var inputImage: UIImage?
-    @State var travelTitle = ""
-    @State var travelDescription = ""
+    @State var travelTitle: String
+    @State var travelDescription: String
     
     @Environment(\.dismiss) var dismiss
+    
+    init(viewModel: TravelDiaryViewModel, travel: Binding<Travel>) {
+        self._viewModel = StateObject(wrappedValue: viewModel)
+        self._travel = travel
+        self._travelTitle = State(initialValue: travel.wrappedValue.title)
+        self._travelDescription = State(initialValue: travel.wrappedValue.description)
+    }
     
     var body: some View {
         if let user = authViewModel.currentUser {
             VStack {
-                Text("Add new travel")
+                Text("Edit Travel")
                     .font(.title2)
                 
                 HStack {
-                        Menu {
-                            Button {
-                                showCamera.toggle()
-                            } label: {
-                                Label("Take foto", systemImage: "camera")
-                            }
-                            Button {
-                                showingImagePicker.toggle()
-                            } label: {
-                                Label("Choose from gallery", systemImage: "photo")
-                            }
+                    Menu {
+                        Button {
+                            showCamera.toggle()
                         } label: {
+                            Label("Take photo", systemImage: "camera")
+                        }
+                        Button {
+                            showingImagePicker.toggle()
+                        } label: {
+                            Label("Choose from gallery", systemImage: "photo")
+                        }
+                    } label: {
                         VStack {
                             if let image = self.inputImage {
                                 Image(uiImage: image)
@@ -47,10 +56,17 @@ struct DiaryInputView: View {
                                     .frame(width: 128, height: 128)
                                     .cornerRadius(64)
                             } else {
-                                Image(systemName: "photo.badge.plus")
-                                    .font(.system(size: 64))
-                                    .padding()
-                                    .foregroundColor(.pink)
+                                AsyncImage(url: URL(string: travel.imageURL)) { image in
+                                    image
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 128, height: 128)
+                                        .cornerRadius(64)
+                                } placeholder: {
+                                    ProgressView()
+                                        .frame(width: 128, height: 128)
+                                        .cornerRadius(64)
+                                }
                             }
                         }.padding(.horizontal)
                     }
@@ -63,7 +79,7 @@ struct DiaryInputView: View {
                     
                     Spacer()
                     
-                    VStack{
+                    VStack {
                         Text("Title: ")
                         TextView(
                             text: $travelTitle
@@ -82,10 +98,15 @@ struct DiaryInputView: View {
                 
                 Spacer()
                 
-                Button("Save Travel") {
+                Button("Save Changes") {
                     Task {
-                        await viewModel.saveTravel(travelTitle: travelTitle, travelDescription: travelDescription, inputImage: inputImage ?? UIImage(), userId: user.id) { success in
+                        await viewModel.editTravel(oldTitle: travel.title, newTitle: travelTitle, newDescription: travelDescription, newImage: inputImage, userId: user.id) { success in
                             if success {
+                                travel.title = travelTitle
+                                travel.description = travelDescription
+                                if let newImageURL = inputImage {
+                                    travel.imageURL = newImageURL.description
+                                }
                                 dismiss()
                             }
                         }
@@ -104,14 +125,12 @@ struct DiaryInputView: View {
     }
 }
 
-extension DiaryInputView: AuthenticationFormProtocol {
+extension EditDiaryView: AuthenticationFormProtocol {
     var formIsValid: Bool {
-        return inputImage != nil
-        && !travelTitle.isEmpty
-        && !travelDescription.isEmpty
+        return !travelTitle.isEmpty && !travelDescription.isEmpty
     }
 }
 
 #Preview {
-    DiaryInputView(viewModel: TravelDiaryViewModel())
+    EditDiaryView(viewModel: TravelDiaryViewModel(), travel: .constant(Travel(title: "Title", description: "Description", imageURL: "")))
 }
