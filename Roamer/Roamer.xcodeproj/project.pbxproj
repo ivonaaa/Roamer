@@ -8,13 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		48C2727C2BECBA6C00FEF91B /* world-low.svg in Resources */ = {isa = PBXBuildFile; fileRef = 48C2727B2BECBA6C00FEF91B /* world-low.svg */; };
-		48C272B42BECC30700FEF91B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 48C272B32BECC30700FEF91B /* Alamofire */; };
 		48C272C52BEF46E500FEF91B /* TravelMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C272C42BEF46E500FEF91B /* TravelMapView.swift */; };
 		48CF618E2BEA99B100691E2A /* RoamerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CF618D2BEA99B100691E2A /* RoamerApp.swift */; };
 		48CF61902BEA99B100691E2A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CF618F2BEA99B100691E2A /* ContentView.swift */; };
 		48CF61922BEA99B300691E2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48CF61912BEA99B300691E2A /* Assets.xcassets */; };
 		48CF61952BEA99B300691E2A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48CF61942BEA99B300691E2A /* Preview Assets.xcassets */; };
-		48CF619D2BEA9A4F00691E2A /* InteractiveMap in Frameworks */ = {isa = PBXBuildFile; productRef = 48CF619C2BEA9A4F00691E2A /* InteractiveMap */; };
 		48CF61A32BEA9B5500691E2A /* CountryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CF61A22BEA9B5500691E2A /* CountryRepository.swift */; };
 		48CF61AA2BEA9E0100691E2A /* TravelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CF61A92BEA9E0100691E2A /* TravelViewModel.swift */; };
 		48FAE5DA2BFCA5740041462D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE5D92BFCA5740041462D /* LoginView.swift */; };
@@ -23,10 +21,6 @@
 		48FAE5E02BFCB0AC0041462D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE5DF2BFCB0AC0041462D /* ProfileView.swift */; };
 		48FAE5E22BFCD5550041462D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE5E12BFCD5550041462D /* User.swift */; };
 		48FAE5E42BFCD9A90041462D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48FAE5E32BFCD9A90041462D /* GoogleService-Info.plist */; };
-		48FAE5E72BFCE90A0041462D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 48FAE5E62BFCE90A0041462D /* FirebaseAuth */; };
-		48FAE5E92BFCE90A0041462D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 48FAE5E82BFCE90A0041462D /* FirebaseFirestore */; };
-		48FAE5EB2BFCE90A0041462D /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 48FAE5EA2BFCE90A0041462D /* FirebaseFirestoreSwift */; };
-		48FAE5ED2BFCE90A0041462D /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 48FAE5EC2BFCE90A0041462D /* FirebaseStorage */; };
 		48FAE5EF2BFCEADC0041462D /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE5EE2BFCEADC0041462D /* AuthViewModel.swift */; };
 		48FAE5F72BFDFE640041462D /* AddCountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE5F62BFDFE640041462D /* AddCountryView.swift */; };
 		48FAE5F92BFDFF3B0041462D /* CountriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE5F82BFDFF3B0041462D /* CountriesViewModel.swift */; };
@@ -53,6 +47,12 @@
 		48FAE6292BFFDCF50041462D /* CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE6282BFFDCF50041462D /* CustomBackButton.swift */; };
 		48FAE62B2C071D0D0041462D /* EditDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE62A2C071D0D0041462D /* EditDiaryView.swift */; };
 		48FAE62D2C086C790041462D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAE62C2C086C790041462D /* SearchBar.swift */; };
+		48FAE6302C086F280041462D /* InteractiveMap in Frameworks */ = {isa = PBXBuildFile; productRef = 48FAE62F2C086F280041462D /* InteractiveMap */; };
+		48FAE6332C086F2F0041462D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 48FAE6322C086F2F0041462D /* Alamofire */; };
+		48FAE6382C086FCC0041462D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 48FAE6372C086FCC0041462D /* FirebaseAuth */; };
+		48FAE63A2C086FCC0041462D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 48FAE6392C086FCC0041462D /* FirebaseFirestore */; };
+		48FAE63C2C086FCC0041462D /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 48FAE63B2C086FCC0041462D /* FirebaseFirestoreSwift */; };
+		48FAE63E2C086FCC0041462D /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 48FAE63D2C086FCC0041462D /* FirebaseStorage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -117,12 +117,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48FAE5EB2BFCE90A0041462D /* FirebaseFirestoreSwift in Frameworks */,
-				48CF619D2BEA9A4F00691E2A /* InteractiveMap in Frameworks */,
-				48FAE5E92BFCE90A0041462D /* FirebaseFirestore in Frameworks */,
-				48FAE5E72BFCE90A0041462D /* FirebaseAuth in Frameworks */,
-				48C272B42BECC30700FEF91B /* Alamofire in Frameworks */,
-				48FAE5ED2BFCE90A0041462D /* FirebaseStorage in Frameworks */,
+				48FAE6302C086F280041462D /* InteractiveMap in Frameworks */,
+				48FAE6332C086F2F0041462D /* Alamofire in Frameworks */,
+				48FAE63A2C086FCC0041462D /* FirebaseFirestore in Frameworks */,
+				48FAE63E2C086FCC0041462D /* FirebaseStorage in Frameworks */,
+				48FAE6382C086FCC0041462D /* FirebaseAuth in Frameworks */,
+				48FAE63C2C086FCC0041462D /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,12 +388,12 @@
 			);
 			name = Roamer;
 			packageProductDependencies = (
-				48CF619C2BEA9A4F00691E2A /* InteractiveMap */,
-				48C272B32BECC30700FEF91B /* Alamofire */,
-				48FAE5E62BFCE90A0041462D /* FirebaseAuth */,
-				48FAE5E82BFCE90A0041462D /* FirebaseFirestore */,
-				48FAE5EA2BFCE90A0041462D /* FirebaseFirestoreSwift */,
-				48FAE5EC2BFCE90A0041462D /* FirebaseStorage */,
+				48FAE62F2C086F280041462D /* InteractiveMap */,
+				48FAE6322C086F2F0041462D /* Alamofire */,
+				48FAE6372C086FCC0041462D /* FirebaseAuth */,
+				48FAE6392C086FCC0041462D /* FirebaseFirestore */,
+				48FAE63B2C086FCC0041462D /* FirebaseFirestoreSwift */,
+				48FAE63D2C086FCC0041462D /* FirebaseStorage */,
 			);
 			productName = Roamer;
 			productReference = 48CF618A2BEA99B100691E2A /* Roamer.app */;
@@ -424,9 +424,9 @@
 			);
 			mainGroup = 48CF61812BEA99B100691E2A;
 			packageReferences = (
-				48CF619B2BEA9A4F00691E2A /* XCRemoteSwiftPackageReference "InteractiveMap" */,
-				48C272B22BECC30700FEF91B /* XCRemoteSwiftPackageReference "Alamofire" */,
-				48FAE5E52BFCE90A0041462D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				48FAE62E2C086F280041462D /* XCRemoteSwiftPackageReference "InteractiveMap" */,
+				48FAE6312C086F2F0041462D /* XCRemoteSwiftPackageReference "Alamofire" */,
+				48FAE6362C086FCC0041462D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 48CF618B2BEA99B100691E2A /* Products */;
 			projectDirPath = "";
@@ -726,14 +726,6 @@
 				minimumVersion = 5.9.1;
 			};
 		};
-		48C272B22BECC30700FEF91B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.9.1;
-			};
-		};
 		48CF619B2BEA9A4F00691E2A /* XCRemoteSwiftPackageReference "InteractiveMap" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/GrandSir/InteractiveMap";
@@ -742,12 +734,28 @@
 				kind = branch;
 			};
 		};
-		48FAE5E52BFCE90A0041462D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		48FAE62E2C086F280041462D /* XCRemoteSwiftPackageReference "InteractiveMap" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/GrandSir/InteractiveMap";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		48FAE6312C086F2F0041462D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+		48FAE6362C086FCC0041462D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 10.26.0;
+				minimumVersion = 10.27.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -763,34 +771,34 @@
 			package = 48C2729F2BECC24600FEF91B /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		48C272B32BECC30700FEF91B /* Alamofire */ = {
+		48FAE62F2C086F280041462D /* InteractiveMap */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 48C272B22BECC30700FEF91B /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		48CF619C2BEA9A4F00691E2A /* InteractiveMap */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 48CF619B2BEA9A4F00691E2A /* XCRemoteSwiftPackageReference "InteractiveMap" */;
+			package = 48FAE62E2C086F280041462D /* XCRemoteSwiftPackageReference "InteractiveMap" */;
 			productName = InteractiveMap;
 		};
-		48FAE5E62BFCE90A0041462D /* FirebaseAuth */ = {
+		48FAE6322C086F2F0041462D /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 48FAE5E52BFCE90A0041462D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 48FAE6312C086F2F0041462D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		48FAE6372C086FCC0041462D /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48FAE6362C086FCC0041462D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
 		};
-		48FAE5E82BFCE90A0041462D /* FirebaseFirestore */ = {
+		48FAE6392C086FCC0041462D /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 48FAE5E52BFCE90A0041462D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 48FAE6362C086FCC0041462D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
 		};
-		48FAE5EA2BFCE90A0041462D /* FirebaseFirestoreSwift */ = {
+		48FAE63B2C086FCC0041462D /* FirebaseFirestoreSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 48FAE5E52BFCE90A0041462D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 48FAE6362C086FCC0041462D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
 		};
-		48FAE5EC2BFCE90A0041462D /* FirebaseStorage */ = {
+		48FAE63D2C086FCC0041462D /* FirebaseStorage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 48FAE5E52BFCE90A0041462D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 48FAE6362C086FCC0041462D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
