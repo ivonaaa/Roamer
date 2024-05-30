@@ -7,16 +7,30 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct AddCountryView: View {
     @EnvironmentObject var authViewModel: AuthViewModel
     @ObservedObject var countriesViewModel = CountriesViewModel()
     @Environment(\.dismiss) var dismiss
     
+    @State private var searchText = ""
+    
+    var filteredCountries: [Country] {
+        if searchText.isEmpty {
+            return countriesViewModel.countries
+        } else {
+            return countriesViewModel.countries.filter { $0.officialName.localizedCaseInsensitiveContains(searchText) }
+        }
+    }
+    
     var body: some View {
         if let user = authViewModel.currentUser {
             NavigationStack {
                 VStack {
-                    List(countriesViewModel.countries, id: \.self) { country in
+                    SearchBar(text: $searchText, placeholder: "Search countries")
+                    
+                    List(filteredCountries, id: \.self) { country in
                         Button {
                             Task {
                                 await countriesViewModel.addCountryToMyCountries(country: country.countryCode, userId: user.id)
@@ -46,7 +60,7 @@ struct AddCountryView: View {
                                     
                                     Button(action: {
                                         Task {
-                                            await countriesViewModel.deleteCountryFromMyCountries(country:country.countryCode, userId: user.id)
+                                            await countriesViewModel.deleteCountryFromMyCountries(country: country.countryCode, userId: user.id)
                                         }
                                         dismiss()
                                     }, label: {

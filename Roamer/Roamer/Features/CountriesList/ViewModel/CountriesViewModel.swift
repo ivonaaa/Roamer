@@ -32,6 +32,7 @@ class CountriesViewModel: ObservableObject {
                     flag: country.flags.png
                 )
             }
+            self.countries = self.countries.sorted { $0.officialName < $1.officialName }
         } catch {
             print("Error fetching countries: \(error)")
         }
