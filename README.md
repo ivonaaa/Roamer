@@ -11,11 +11,10 @@ Do you find yourself lost in the chaos of planning and keeping track of your adv
 ### Authentication and User Profile
 - **Sign up** for a Roamer account to unlock a world of travel possibilities.
 - **Log in** to access your personalized travel hub.
-- **Change password** or **delete your profile** anytime for peace of mind.
 
 ### Travel Journal
 - Keep a digital **travel diary** to chronicle your globe-trotting escapades.
-- **Add and edit entries** to capture every memorable moment.
+- **Add, delete and edit entries** to capture every memorable moment.
 - Spice up your journal with **captivating images** from your adventures.
 
 ### Interactive Map
