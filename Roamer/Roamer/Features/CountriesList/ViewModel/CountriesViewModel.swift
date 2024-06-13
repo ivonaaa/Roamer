@@ -15,6 +15,7 @@ class CountriesViewModel: ObservableObject {
     @Published var countries: [Country] = []
     @Published var myCountries: [String] = []
     private let countryRepository = CountryRepository()
+    @Published var error: CustomError? = nil
 
     init() {
         Task {
@@ -24,6 +25,7 @@ class CountriesViewModel: ObservableObject {
 
     func setupDataSubscription() async {
         do {
+            error = nil
             let responses = try await countryRepository.fetchCountries()
             self.countries = responses.map { country in
                 Country(
@@ -34,17 +36,20 @@ class CountriesViewModel: ObservableObject {
             }
             self.countries = self.countries.sorted { $0.officialName < $1.officialName }
         } catch {
+            self.error = CustomError(title: "Failed to fetch countries", description: "Please try again.")
             print("Error fetching countries: \(error)")
         }
     }
     
     func fetchMyCountries(userId: String) async {
         do {
+            error = nil
             let document = try await Firestore.firestore().collection("countries").document(userId).getDocument()
             if let data = document.data(), let countries = data["myCountries"] as? [String] {
                 self.myCountries = countries
             }
         } catch {
+            self.error = CustomError(title: "Failed to fetch countries", description: "Please try again.")
             print("Error fetching user countries: \(error)")
         }
     }
@@ -54,8 +59,10 @@ class CountriesViewModel: ObservableObject {
         myCountries.append(country)
         
         do {
+            error = nil
             try await Firestore.firestore().collection("countries").document(userId).setData(["myCountries": myCountries], merge: true)
         } catch {
+            self.error = CustomError(title: "Failed to add country", description: "Please try again.")
             print("Failed to update user's countries: \(error)")
         }
     }
@@ -65,8 +72,10 @@ class CountriesViewModel: ObservableObject {
         myCountries.remove(at: index)
         
         do {
+            error = nil
             try await Firestore.firestore().collection("countries").document(userId).setData(["myCountries": myCountries], merge: true)
         } catch {
+            self.error = CustomError(title: "Failed to delete country", description: "Please try again.")
             print("Failed to update user's countries: \(error)")
         }
     }

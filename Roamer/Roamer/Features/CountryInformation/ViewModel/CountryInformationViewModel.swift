@@ -16,6 +16,8 @@ class CountryInformationViewModel: ObservableObject {
     @Published var southAmericaCountries: [CountryDetail] = []
     @Published var oceaniaCountries: [CountryDetail] = []
     @Published var antarcticaCountries: [CountryDetail] = []
+    @Published var error: CustomError? = nil
+
     
     private let countryRepository = CountryInformationRepository()
 
@@ -36,6 +38,7 @@ class CountryInformationViewModel: ObservableObject {
             self.oceaniaCountries = responses.filter { $0.continents[0] == "Oceania" }.sorted { $0.name.common < $1.name.common }
             self.antarcticaCountries = responses.filter { $0.continents[0] == "Antarctica" }.sorted { $0.name.common < $1.name.common }
         } catch {
+            self.error = CustomError(title: "Failed to fetch countries information", description: "Please try again.")
             print("Error fetching countries: \(error)")
         }
     }

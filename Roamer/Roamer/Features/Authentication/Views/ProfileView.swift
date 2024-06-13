@@ -51,7 +51,26 @@ struct ProfileView: View {
                                 .foregroundColor(.black)
                         }
                     })
+                    Button(action: {
+                        Task {
+                            await viewModel.deleteAccount()
+                        }
+                    }, label: {
+                        HStack {
+                            Image(systemName: "person.crop.circle.badge.minus")
+                                .imageScale(.small)
+                                .font(.title)
+                                .foregroundColor(.pink)
+                            
+                            Text("Delete Account")
+                                .font(.subheadline)
+                                .foregroundColor(.black)
+                        }
+                    })
                 }
+            }
+            .alert(item: $viewModel.error) { error in
+                Alert(title: Text(error.title), message: Text(error.description), dismissButton: .default(Text("OK")))
             }
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(leading: CustomBackButton())

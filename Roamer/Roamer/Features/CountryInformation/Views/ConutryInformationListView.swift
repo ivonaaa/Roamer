@@ -24,6 +24,9 @@ struct ConutryInformationListView: View {
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(leading: CustomBackButton())
         }
+        .alert(item: $countriesViewModel.error) { error in
+            Alert(title: Text(error.title), message: Text(error.description), dismissButton: .default(Text("OK")))
+        }
     }
 }
 

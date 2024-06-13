@@ -61,6 +61,9 @@ struct LoginView: View {
                     .foregroundColor(.pink)
                 }
             }
+            .alert(item: $viewModel.error) { error in
+                Alert(title: Text(error.title), message: Text(error.description), dismissButton: .default(Text("OK")))
+            }
         }
     }
 }
