@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4861ECD02C1B6BA90064EDFC /* CustimError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4861ECCF2C1B6BA90064EDFC /* CustimError.swift */; };
+		4861ECD02C1B6BA90064EDFC /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4861ECCF2C1B6BA90064EDFC /* CustomError.swift */; };
 		4861ECD32C1B72EC0064EDFC /* InteractiveMap in Frameworks */ = {isa = PBXBuildFile; productRef = 4861ECD22C1B72EC0064EDFC /* InteractiveMap */; };
 		48C2727C2BECBA6C00FEF91B /* world-low.svg in Resources */ = {isa = PBXBuildFile; fileRef = 48C2727B2BECBA6C00FEF91B /* world-low.svg */; };
 		48C272C52BEF46E500FEF91B /* TravelMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C272C42BEF46E500FEF91B /* TravelMapView.swift */; };
@@ -70,7 +70,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4861ECCF2C1B6BA90064EDFC /* CustimError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustimError.swift; sourceTree = "<group>"; };
+		4861ECCF2C1B6BA90064EDFC /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		48C2727B2BECBA6C00FEF91B /* world-low.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "world-low.svg"; path = "../../../../Downloads/world-low.svg"; sourceTree = "<group>"; };
 		48C272C42BEF46E500FEF91B /* TravelMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelMapView.swift; sourceTree = "<group>"; };
 		48CF618A2BEA99B100691E2A /* Roamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roamer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -281,7 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				48FAE5E12BFCD5550041462D /* User.swift */,
-				4861ECCF2C1B6BA90064EDFC /* CustimError.swift */,
+				4861ECCF2C1B6BA90064EDFC /* CustomError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -490,7 +490,7 @@
 				48FAE5E02BFCB0AC0041462D /* ProfileView.swift in Sources */,
 				48FAE5E22BFCD5550041462D /* User.swift in Sources */,
 				48FAE5DE2BFCAC9E0041462D /* RegistrationView.swift in Sources */,
-				4861ECD02C1B6BA90064EDFC /* CustimError.swift in Sources */,
+				4861ECD02C1B6BA90064EDFC /* CustomError.swift in Sources */,
 				48FAE6082BFF43030041462D /* RegionScrollView.swift in Sources */,
 				48FAE6002BFE789F0041462D /* ConutryInformationListView.swift in Sources */,
 				48FAE6212BFFA0CA0041462D /* ImagePicker.swift in Sources */,

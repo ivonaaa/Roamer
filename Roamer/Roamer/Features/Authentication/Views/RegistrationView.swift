@@ -28,10 +28,16 @@ struct RegistrationView: View {
                               title: "Full name",
                               placeholder: "Enter your name")
                     
-                    InputView(text: $password, title: "Password", placeholder: "Enter your password", isSecureField: true)
+                    InputView(text: $password, 
+                              title: "Password",
+                              placeholder: "Enter your password",
+                              isSecureField: true)
                     
                     ZStack(alignment: .trailing) {
-                        InputView(text: $confirmPassword, title: "Confirm Password", placeholder: "Confirm your password", isSecureField: true)
+                        InputView(text: $confirmPassword, 
+                                  title: "Confirm Password",
+                                  placeholder: "Confirm your password",
+                                  isSecureField: true)
                         if !password.isEmpty && !confirmPassword.isEmpty {
                             if password == confirmPassword {
                                 Image(systemName: "checkmark.circle.fill")
@@ -52,9 +58,10 @@ struct RegistrationView: View {
                 
                 Button(action: {
                     Task {
-                        try await viewModel.createUser(withEmail: email,
-                                                       password: password,
-                                                       fullName: name)
+                        try await viewModel.createUser(
+                            withEmail: email,
+                            password: password,
+                            fullName: name)
                     }
                 }, label: {
                     HStack {

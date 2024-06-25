@@ -15,14 +15,16 @@ struct LoginView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                //add logo
                 VStack(spacing: 24) {
                     InputView(text: $email,
                               title: "Email Address",
                               placeholder: "name@example.com")
                     .autocapitalization(.none)
                     
-                    InputView(text: $password, title: "Password", placeholder: "Enter your password", isSecureField: true)
+                    InputView(text: $password, 
+                              title: "Password",
+                              placeholder: "Enter your password",
+                              isSecureField: true)
                 }
                 .padding(.horizontal)
                 .padding(.top, 12)
